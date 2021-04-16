@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX || Landing Page</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/font-awesome.css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="./img/logo.png" alt=""></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="./img/bg.jpg" alt="#" class="bg">
+        <div class="content">
+            <img src="./img/name.png" alt="" class="movieTitle">
+            <h4>
+                <span>2020</span>
+                <span><i>14+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure expedita suscipit nostrum voluptatum, esse
+                voluptate officiis itaque quibusdam delectus enim error ut molestias eos necessitatibus quod voluptates
+                vero adipisci nesciunt reprehenderit, vel alias totam sequi sapiente ipsa. Dolores, sequi neque dolore
+                beatae ipsum maxime tempore cum ad aperiam totam in qui placeat amet ab ipsam maiores!
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> My List</a>
+            </div>
+        </div>
+        <a href="#" class="play" onclick="toggleVideo()"><img src="./img/play.png" alt="">Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="https://youtube.com" controls="true" autoplay="true"></video>
+        <img src="./img/close.png" class="close" alt="" onclick="toggleVideo()">
+    </div>
+
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+</body>
+
+</html>
